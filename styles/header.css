@@ -1,0 +1,71 @@
+.cabeçalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.3s; /* Transição suave para o hover */
+}
+
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw; 
+    background-color: var(--branco);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 10; /* Garante que o menu fique sobre outros elementos */
+}
+
+.container__botao:checked ~ .lista-menu {
+    display: block;
+    opacity: 1;
+}
+
+.lista-menu_titulo, 
+.lista-menu_item {
+    padding: 1em; 
+    transition: background-color 0.3s;
+}
+
+.lista-menu_item:hover {
+    background-color: rgb(199, 216, 223); 
+}
+
+.lista-menu_titulo {
+    color: var(--laranja); 
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    padding: 0.5em 1em; /* Adiciona espaçamento aos links */
+    display: block; /* Faz com que o link ocupe toda a largura */
+}
+
+.container__botao {
+    display: none;
+}

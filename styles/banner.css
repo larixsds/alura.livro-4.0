@@ -1,0 +1,36 @@
+.banner {
+    background: var(--azul-degrade);
+    color: var(--branco);
+    text-align: center;
+    padding: 2.5em 2em;
+}
+
+.banner__titulo {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.banner__texto {
+    font-weight: 500;
+    margin: 1em 0; 
+}
+
+.banner__pesquisa {
+    background-color: transparent;
+    border: 2px solid var(--branco); /* Ajuste a espessura da borda aqui */
+    color: var(--branco);
+    border-radius: 24px;
+    padding: 1em 1em 1em 3em; /* Espaço para a lupa */
+    width: 100%;
+    background: url("../img/magnifier_icon-icons.com_48267.png") no-repeat 1em center;
+    background-size: 16px 16px; /* Ajuste conforme necessário */
+    font-size: 14px; /* Ajuste o tamanho da fonte se necessário */
+}
+
+.banner__pesquisa::placeholder {
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    text-align: center;
+    color: var(--branco);
+    opacity: 0.7; /* Aumenta a visibilidade do texto do placeholder */
+}
